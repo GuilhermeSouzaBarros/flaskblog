@@ -1,7 +1,108 @@
-h1 {
-    border: 2px #eee solid;
-    color: brown;
-    text-align: center;
-    padding: 10px;
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #101010;
+    color: white;
+    font-family: sans-serif;
 }
 
+div.container {
+    margin: 5vh 5vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+}
+
+nav div.link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 12.5vw;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 12.5vw;
+    height: 100%;
+    text-align: center;
+}
+
+a.logo {
+    font-size: 3vh;
+}
+
+a.link {
+    font-size: 2vh;
+    padding: 15%;
+}
+
+div.post, form.post {
+    width: 50vw;
+    padding: 2.5vh 5vw; 
+    margin: 5vh 20vw;
+    background-color: #101018;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+
+div.post a.titulo, h2.titulo {
+    font-size: 3vh;
+    margin: 15px;
+}
+
+div.post div.info a.edit, button {
+    display: inline-block;
+    border: 1px solid white;
+    color: white;
+    background-color: #101040;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+
+div.inputs {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+div.inputs label {
+    margin-right: 15px;
+}
+
+textarea {
+    width: 65%;
+    resize: none;
+    cols: 300;
+    rows: 3;
+}
+
+form.delet {
+    margin-left: 35vw;
+    margin-top: -10.5vh;
+}
+
+form.delet input {
+    border: 1px solid white;
+    color: white;
+    background-color: #ff1010;
+    padding: 5px 10px;
+    margin-left: 15px;
+}

@@ -1,14 +1,17 @@
 {% extends "base.html"%}
+{% block title %}FlaskBlog{% endblock %}
 {% block content %}
-    <h1>{% block title %}FlaskBlog{% endblock %}</h1>
     {% for post in posts %}
-        <a href="{{ url_for('post', post_id=post['id']) }}">
-            <h2>{{ post['title'] }}</h2>
-        </a>
-        <span class="badge badge-primary">{{ post['created'] }}</span>
-        <a href="{{ url_for('edit', id=post['id']) }}">
-            <span class="badge badge-warning">Edit</span>
-        </a>
-        <hr>
+        <div class="post">
+            <a class="titulo" href="{{ url_for('post', post_id=post['id']) }}">
+                {{ post['title'] }}
+            </a>
+            <div class="info">
+                <span class="data">{{ post['created'] }}</span>
+                <a class="edit" href="{{ url_for('edit', id=post['id']) }}">
+                    Edit
+                </a>
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}
